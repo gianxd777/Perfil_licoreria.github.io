@@ -1,0 +1,607 @@
+/* Estilo para el cuerpo del documento */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #020249, #0c204e);
+    color: rgb(255, 254, 254);
+    scroll-behavior: smooth;
+    font-size: 18px;
+}
+
+/* Estilo para las secciones */
+.section {
+    padding-top: 80px; /* Ajusta este valor según el alto de tu barra de navegación */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilo para el encabezado */
+header {
+    width: 100%;
+    background-color: rgba(17, 17, 17, 0.7);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.5s ease-in-out;
+}
+
+header:hover {
+    background-color: rgba(17, 17, 17, 0.9);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 100px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-link {
+    font-weight: 600;
+    padding: 0 10px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+    color: rgb(72, 209, 163);
+    transform: scale(1.05);
+}
+
+.nav-links .contact-link {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links .contact-link:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Estilo para la sección de perfil */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.text-box {
+    flex: 1;
+    padding-right: 20px;
+    text-align: left;
+}
+
+.text-box h3 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.text-box h3:hover {
+    color: rgb(72, 209, 163);
+}
+
+.text-box p {
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: justify;
+    transition: color 0.3s ease;
+}
+
+.text-box p:hover {
+    color: rgb(72, 209, 163);
+}
+
+.profile-image {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para las secciones de imagen y texto */
+.image-container {
+    text-align: justify;
+    margin: 20px;
+    padding: 20px;
+    flex: 1;
+    transition: transform 0.5s ease-in-out;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.image-container img:hover {
+    transform: scale(1.05);
+}
+
+.image-container h3,
+.image-container p,
+.image-container a {
+    margin: 10px 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.image-container h3:hover,
+.image-container p:hover,
+.image-container a:hover {
+    color: rgb(72, 209, 163);
+    transform: scale(1.05);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.container .image {
+    max-width: 45%;
+    width: 100%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.container .content {
+    text-align: left;
+    max-width: 50%;
+}
+
+.container .content h3 {
+    margin: 10px 0;
+    font-size: 35px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.container .content h3:hover {
+    color: rgb(72, 209, 163);
+    transform: scale(1.05);
+}
+
+.container .content p {
+    margin: 10px 0;
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.container .content p:hover {
+    color: rgb(72, 209, 163);
+    transform: scale(1.05);
+}
+
+.container .content a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.container .content a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Estilo para la sección de contacto */
+.contact {
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #007BFF;
+    display: inline-block;
+    padding-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.contact h2:hover {
+    color: rgb(72, 209, 163);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    margin: 10px;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover img {
+    transform: rotate(360deg);
+}
+
+/* Ajustar textos */
+.text-box h3 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.container .content h3 {
+    font-size: 35px;
+    margin: 10px 0;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.text-box p {
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.container .content p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* Media Queries para Responsividad */
+
+/* Media Queries para Responsividad */
+
+/* Para pantallas de hasta 1024px (tablets) */
+@media (max-width: 1024px) {
+    /* Ajustar tamaños de texto */
+    .text-box h3 {
+        font-size: 50px;
+    }
+
+    .container .content h3 {
+        font-size: 30px;
+    }
+
+    .contact h2 {
+        font-size: 30px;
+    }
+
+    .text-box p, .container .content p {
+        font-size: 18px;
+    }
+
+    /* Ajustar tamaños de imagen */
+    .profile-image {
+        max-width: 400px; /* Reducir tamaño máximo de imagen */
+    }
+
+    .container .image {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    /* Ajustar el contenedor */
+    .container {
+        flex-direction: column;
+        align-items: center; /* Centrar elementos en columna */
+    }
+
+    .container .content {
+        max-width: 90%; /* Reducir ancho máximo para pantallas pequeñas */
+    }
+
+    /* Ajustar el espaciado de navegación */
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center; /* Centrar enlaces */
+    }
+
+    .nav-link, .nav-links .contact-link {
+        padding: 10px 0;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+}
+
+/* Para pantallas de hasta 768px (celulares) */
+@media (max-width: 768px) {
+    /* Ajustar tamaños de texto */
+    .text-box h3 {
+        font-size: 40px;
+    }
+
+    .container .content h3 {
+        font-size: 25px;
+    }
+
+    .contact h2 {
+        font-size: 25px;
+    }
+
+    .text-box p, .container .content p {
+        font-size: 16px;
+    }
+
+    /* Ajustar tamaños de imagen */
+    .profile-image {
+        max-width: 300px; /* Reducir aún más el tamaño máximo de imagen */
+    }
+
+    .container .image {
+        max-width: 100%;
+    }
+
+    /* Ajustar el contenedor */
+    .container .content {
+        max-width: 100%;
+        padding: 0 10px; /* Añadir espaciado en móviles */
+    }
+
+    /* Ajustar el espaciado de navegación */
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center; /* Centrar enlaces */
+    }
+
+    .nav-link, .nav-links .contact-link {
+        padding: 10px 0;
+    }
+
+    .logo img {
+        height: 60px; /* Ajustar tamaño del logo */
+    }
+}
+
+
+
+/* Estilo para el encabezado */
+header {
+    width: 100%;
+    background-color: rgba(17, 17, 17, 0.7);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.5s ease-in-out;
+}
+
+header:hover {
+    background-color: rgba(17, 17, 17, 0.9);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 100px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    transition: max-height 0.3s ease; /* Añadir transición para el menú desplegable */
+}
+
+.nav-link {
+    font-weight: 600;
+    padding: 0 10px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+    color: rgb(72, 209, 163);
+    transform: scale(1.05);
+}
+
+.nav-links .contact-link {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links .contact-link:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Media Queries para Responsividad */
+
+/* Para pantallas de hasta 1024px (tablets) */
+@media (max-width: 1024px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    .nav-links {
+        display: block;
+        width: 100%;
+        text-align: center;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .nav-links.active {
+        max-height: 500px; /* Ajustar según el contenido del menú */
+    }
+
+    .nav-link, .nav-links .contact-link {
+        display: block;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: #fff;
+    }
+}
+
+/* Para pantallas de hasta 768px (celulares) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: block;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .nav-links.active {
+        max-height: 500px; /* Ajustar según el contenido del menú */
+    }
+
+    .nav-link, .nav-links .contact-link {
+        display: block;
+        padding: 10px 20px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: #fff;
+    }
+}
+
+
+
+
+/* Estilo para los botones de contactar */
+.contact-link {
+    display: inline-block;
+    padding: 12px 25px; /* Ajustar el tamaño del botón */
+    background-color: #007BFF; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    text-decoration: none; /* Eliminar subrayado */
+    font-size: 16px; /* Tamaño del texto */
+    border-radius: 8px; /* Bordes redondeados */
+    border: 2px solid #007BFF; /* Borde que coincide con el fondo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: all 0.3s ease; /* Transición suave para los efectos */
+}
+
+.contact-link:hover {
+    background-color: #0056b3; /* Cambiar color de fondo al pasar el ratón */
+    border-color: #0056b3; /* Cambiar el borde al pasar el ratón */
+    transform: translateY(-2px); /* Efecto de elevación al pasar el ratón */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumentar la sombra al pasar el ratón */
+}
+
+/* Efecto cuando el ratón está sobre el botón */
+.contact-link:active {
+    transform: translateY(0); /* Restablecer la posición al hacer clic */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Restaurar la sombra */
+}
